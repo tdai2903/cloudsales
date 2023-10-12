@@ -258,22 +258,27 @@ class _HomePageScreenState extends State<HomePageScreen> {
                     return Column(children: [
                       InkWell(
                         onTap: () {
-                          if (index == 7) {
-                            setState(() {
-                              //print(value);
-                              itemCount:
-                              catNames.length;
-                              {
-                                print(jsonList.runtimeType);
-                              }
-                            });
-                          } else {
+                          setState(() {
                             Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => nameScreen[index]),
-                            );
-                          }
+                                context,
+                                MaterialPageRoute(
+                                    builder: ((context) => nameScreen[index])));
+                          });
+                          // if (index == 6) {
+                          //   setState(() {
+                          //     //print(value);
+
+                          //     {
+                          //       print(jsonList.runtimeType);
+                          //     }
+                          //   });
+                          // } else {
+                          //   Navigator.push(
+                          //     context,
+                          //     MaterialPageRoute(
+                          //         builder: (context) => nameScreen[index]),
+                          //   );
+                          // }
                         },
                         child: Container(
                           height: 60,
